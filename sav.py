@@ -16,7 +16,8 @@ import os
 parser = argparse.ArgumentParser()
 parser.add_argument('topic')
 parser.add_argument('-k', '--api-key', required=True)
-parser.add_argument('-u', '--user', default='sav')
+parser.add_argument('-u', '--user', default='seb')
+parser.add_argument('-m', '--mix_user', default='dav')
 parser.add_argument('-c', '--chaos', action='store_true')
 parser.add_argument('--debug', action='store_true')
 settings = parser.parse_args()
@@ -95,8 +96,8 @@ def get_text(name):
 #     return '. '.join(valid_tweets)
 
 def get_post():
-    seb_model = markovify.Text(get_text('seb'))
-    dav_model = markovify.Text(get_text('dav'))
+    seb_model = markovify.Text(get_text(settings.user))
+    dav_model = markovify.Text(get_text(settings.mix_user))
 
     # Unused Twitter code
     # twitter_model = markovify.Text(get_tweets(''))

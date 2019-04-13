@@ -20,6 +20,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -k API_KEY, --api-key API_KEY
   -u USER, --user USER
+  -m USER, --mix_user USER
   -c, --chaos
   --debug
 ```
